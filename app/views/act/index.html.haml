@@ -1,0 +1,12 @@
+%body{class: "welcome-index"}
+  %svg{style: "display: none;"}
+    %defs
+      %polygon#triangle{points: "24,0 24,24 0,24 "}
+      %polygon#arrow{points: "0,0 0,10 8,5 "}
+
+  .wrapper
+    = render "navbar_wrapper"
+    = render "content"
+    = render "footer"
+
+  .anon-stats

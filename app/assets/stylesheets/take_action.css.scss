@@ -1,0 +1,52 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.navbar-wrapper {
+  background-color: transparent !important;
+  position: absolute !important;
+  left: 0px !important;
+  right: 0px !important;
+}
+.navbar-wrapper .navbar-inverse {
+  background-color: transparent !important;
+}
+
+.navbar-wrapper .horiz-rule {
+  background-color: #FFF !important;
+  opacity: 0.3 !important;
+}
+
+.navbar-collapse.collapse.in, .navbar-collapse.collapsing {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+}
+
+.redtop {
+  background: image_url("dark-wallpaper.jpg") no-repeat scroll center center / cover;
+  padding-top: 5em !important;
+}
+
+#tools { color: #333; }
+
+.redtop a.intl-toggler {
+  text-decoration: none;
+  color: #C00;
+}
+
+.styledRadio {
+  background-image: image_url("checkbox.png");
+}
+
+input[type="radio"] { display: none; }
+
+.checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-left: -177px;
+}
+
+input {
+  font-size: 0.8em;
+  width: 100%;
+}

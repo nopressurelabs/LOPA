@@ -1,0 +1,29 @@
+.navbar-wrapper
+  .container
+    .navbar.navbar-inverse{role: "navigation"}
+      .navbar-header
+        %button.navbar-toggle{ data: { target: ".navbar-collapse", toggle: "collapse" }, type: "button" }
+          %span.sr-only
+            Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{href: "/"}
+          %i.icon-eff-action-logo
+
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{href: "/"}
+              Home
+          %li
+            %a{ href: "https://eff.org"}
+              EFF.org
+          %li
+            %a{ href: "https://act.eff.org/register"}
+              Register
+          %li
+            %a{href: "https://act.eff.org/login"}
+              Login
+      .horiz-rule
+      .alert-container
