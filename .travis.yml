@@ -1,8 +1,6 @@
 language: ruby
 rvm:
   - 2.2.2
-services:
-  - redis-server
 env:
   matrix:
     - DB=postgresql
