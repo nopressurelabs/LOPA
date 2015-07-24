@@ -19,3 +19,6 @@
 # Ignore all .DS_Store && .keep
 .DS_Store
 .keep
+
+# Ignore assets
+public/assets/*
