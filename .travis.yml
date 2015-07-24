@@ -10,7 +10,7 @@ script:
   - bundle exec rake
 before_script:
   - cp config/database.travis.yml config/database.yml
-  - psql -c 'create database lopas_test' -U postgres
+  - psql -c 'create database lopa_test' -U postgres
 addons:
   code_climate:
     repo_token: a143f88329030abc0b2733c9aa85e61e64a1e2147a6b5c306070e4d21a04d61f
