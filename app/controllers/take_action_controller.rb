@@ -1,4 +1,16 @@
+include ActionView::Helpers::DateHelper
+
 class TakeActionController < ApplicationController
+
+  def count_actions
+    @count = TakeAction.count
+    render json: @count
+  end
+
+  def last_actions
+    @actions = TakeAction.limit(5).order('created_at DESC')
+    render json: @actions, each_serializer: ActionSerializer, root: "actions"
+  end
 
   def stop_lopa
     @count = TakeAction.count

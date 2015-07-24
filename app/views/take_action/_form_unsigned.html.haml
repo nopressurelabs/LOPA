@@ -1,10 +1,15 @@
 = simple_form_for action, url: {action: "create"}, html: {class: "petition-tool"} do |f|
   %fieldset
+    %span.error
     = f.input :email, placeholder: "Email", class: "form-control", label: false
   %fieldset
+    %span.error
     = f.input :firstname, placeholder: "First Name", class: "form-control", label: false
   %fieldset
+    %span.error
     = f.input :lastname, placeholder: "Last Name", class: "form-control", label: false
+  %fieldset
+    = f.input :us_based, as: :hidden, value: "1"
   %fieldset
     %span.intl-toggle
       .row
@@ -13,7 +18,14 @@
         .col-xs-6
           %a.intl-toggler.pull-right.hidden-if-no-js
             Outside the US?
-    
+  .intl-toggle.intl.collapse
+    %fieldset
+      = f.input :city, placeholder: "City", title: "Enter your city", label: false
+    %fieldset
+      %a.intl-toggler.pull-right.hidden-if-no-js
+        In the US?
+      = country_select("take_action", "country", { except: ["US"] }, { class: "form-control user-error" })
+
   %fieldset
     .checkbox.small
       %label.small

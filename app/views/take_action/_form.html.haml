@@ -1,21 +1,25 @@
-.container.action-content
-  .row
-    .col-xs-12.col-sm-5.col-md-6.col-lg-6.pull-right.tools-wrapper{style: "height: 791px;"}
-      #tools{style: "top: 95px;"}
-        #petition-tool.tool.unsigned
-          .tool-container
-            .tool-heading
-              %h2.tool-title.signed
-                %span.glyphicon.glyphicon-ok
-                  Signed
-              %h2.tool-title.unsigned
-                Sign the petition
-            .tool-body
-              #progress-bar
-                .count
-                  %b
-                    = "#{@count}"
-                  %span.goal
-                    signatures
-              = render "form_signed"
-              = render "form_unsigned", action: @action
+.col-xs-12.col-sm-5.col-md-6.col-lg-6.pull-right.tools-wrapper{style: "height: 791px;"}
+  #tools
+    #petition-tool.tool.unsigned
+      .tool-container
+        .tool-heading
+          %h2.tool-title.signed
+            %span.glyphicon.glyphicon-ok
+              Signed
+          %h2.tool-title.unsigned
+            Sign the petition
+        .tool-body
+          #progress-bar
+            .count
+              %b
+                = "#{@count}"
+              %span.goal
+                signatures
+          = render "form_signed"
+          = render "form_unsigned", action: @action
+    #signatures.hidden-xs
+      %h4.header
+        %em
+          Recent Signatories
+      %table.table
+        %tbody
