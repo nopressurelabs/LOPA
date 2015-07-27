@@ -19,6 +19,12 @@ class TakeAction < ActiveRecord::Base
   validates :lastname, format: { with: /\A[a-zA-Z]+\z/,
                                  message: "only allows letters" }
 
+  validates :city, format: { with: /\A[a-zA-Z]+\z/,
+                             message: "only allows letters" }
+                             
+  validates :country, format: { with: /\A[a-zA-Z]+\z/,
+                            message: "only allows letters" }
+
 
   def is_us_based?
     self.us_based
